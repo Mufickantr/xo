@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class TicTacToe {
+
+public static void main(String[] args) {
+
+csharp
+Copy code
+// Инициализируем новый объект Scanner для чтения пользовательского ввода.
+Scanner input = new Scanner(System.in);
+
+// Создаем новую игру Крестики-нолики.
+Board board = new Board();
+
+// Отображаем стартовое сообщение.
+System.out.println("Добро пожаловать в игру Крестики-нолики!");
+
+// Цикл игры.
+while (!board.isGameOver()) {
+
+  // Отображаем текущее состояние игры.
+  System.out.println(board);
+
+  // Запрашиваем у пользователя ввод координат хода.
+  System.out.print("Введите координаты хода (например, B2): ");
+  String move = input.nextLine();
+
+  // Выполняем ход по указанным координатам.
+  boolean success = board.play(move);
+
+  // Если ход был выполнен успешно, выводим сообщение.
+  if (success) {
+    System.out.println("Ход выполнен!");
+  }
+  // Иначе, выводим сообщение об ошибке.
+  else {
+    System.out.println("Неверные координаты!");
+  }
+}
+
+// Отображаем конечное сообщение.
+System.out
+def get_prime_numbers(n):
+primes = []
+for i in range(2, n+1):
+is_prime = True
+for j in range(2, int(i**0.5)+1):
+if i % j == 0:
+is_prime = False
+break
+if is_prime:
+primes.append(i)
+return primes
+print(get_prime_numbers(20)) # [2, 3, 5, 7, 11, 13, 17, 19]
